@@ -10,7 +10,7 @@ SHELL ["/usr/bin/env", "bash", "-c"]
 
 RUN \
   mkdir -p /opt/onecaas/bin && \
-  apt-get update && apt-get upgrade && \
+  apt-get update && apt-get upgrade -y && \
   apt-get install -y python3 python3-pip python3-dev wget libpq-dev && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
